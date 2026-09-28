@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portafolio de periodismo</title>
+  <meta name="description" content="Portafolio de periodismo y comunicación social: prensa, televisión, radio, podcast y contenido digital.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..600&family=Schibsted+Grotesk:wght@400..700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <noscript><style>.intro{display:none}body{overflow:auto}</style></noscript>
+</head>
+<body class="intro-activa">
+  <a class="saltar-contenido" href="#principal">Ir al contenido</a>
+
+  <!-- ============ INTRO ESTILO MARVEL, VERSIÓN PERIODISMO ============ -->
+  <div class="intro" id="intro">
+    <div class="escenario" id="escenario"></div>
+    <div class="intro-logo" id="introLogo">
+      <div class="logo-caja" id="logoNombre"></div>
+      <p class="logo-cargo" id="logoCargo"></p>
+    </div>
+    <button class="intro-saltar" id="introSaltar" type="button">Saltar intro</button>
+  </div>
+
+  <!-- ============ CABECERA ============ -->
+  <header class="cabecera" id="cabecera">
+    <div class="contenedor cabecera-in">
+      <a class="logo" href="#inicio" data-perfil="nombre"></a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#contacto">Contacto</a>
+        <a class="boton boton-chico" data-cv href="#" download>Descargar CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="principal">
+    <!-- ============ PRIMERA PLANA ============ -->
+    <section class="primera-plana" id="inicio" aria-labelledby="cabezote">
+      <div class="contenedor">
+        <div class="fechario">
+          <span data-perfil="ciudad"></span>
+          <span id="fechaHoy"></span>
+          <span>Portafolio profesional</span>
+        </div>
+        <h1 class="cabezote" id="cabezote" data-perfil="nombre"></h1>
+
+        <div class="plana">
+          <div class="plana-texto">
+            <p class="antetitulo" data-perfil="cargo"></p>
+            <p class="titular" data-perfil="frase"></p>
+            <p class="bajada" data-perfil="bajada"></p>
+            <div class="acciones">
+              <a class="boton boton-solido" href="#trabajos">Ver trabajos</a>
+              <a class="boton" href="#contacto">Contactarme</a>
+            </div>
+          </div>
+          <figure class="plana-foto">
+            <div class="foto-marco trama" id="heroFotoMarco"><img id="heroFoto" alt=""></div>
+            <figcaption data-perfil="pieFoto"></figcaption>
+          </figure>
+        </div>
+
+        <h2 class="oculto">Logros destacados</h2>
+        <ul class="logros" id="logros"></ul>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="seccion" id="sobre-mi" aria-labelledby="t-sobre">
+      <div class="contenedor seccion-grid">
+        <h2 class="seccion-titulo" id="t-sobre">Sobre mí</h2>
+        <div>
+          <div class="bio" id="bio"></div>
+          <dl class="datos" id="datos"></dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SHOWREEL (se muestra solo si existe el video) ============ -->
+    <section class="seccion" id="showreel" aria-labelledby="t-showreel" hidden>
+      <div class="contenedor seccion-grid">
+        <h2 class="seccion-titulo" id="t-showreel">Showreel</h2>
+        <video class="showreel-video" id="showreelVideo" controls playsinline preload="metadata"></video>
+      </div>
+    </section>
+
+    <!-- ============ TRABAJOS ============ -->
+    <section class="seccion" id="trabajos" aria-labelledby="t-trabajos">
+      <div class="contenedor seccion-grid">
+        <h2 class="seccion-titulo" id="t-trabajos">Trabajos</h2>
+        <div>
+          <div class="filtros" id="filtros" role="group" aria-label="Filtrar trabajos por formato"></div>
+          <div class="rejilla" id="rejilla"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRAYECTORIA ============ -->
+    <section class="seccion" id="trayectoria" aria-labelledby="t-trayectoria">
+      <div class="contenedor seccion-grid">
+        <h2 class="seccion-titulo" id="t-trayectoria">Trayectoria</h2>
+        <div>
+          <ol class="linea-tiempo" id="lineaTiempo"></ol>
+          <h3 class="sub-titulo">Habilidades</h3>
+          <div class="habilidades" id="habilidades"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="seccion contacto" id="contacto" aria-labelledby="t-contacto">
+      <div class="contenedor seccion-grid">
+        <h2 class="seccion-titulo" id="t-contacto">Contacto</h2>
+        <div>
+          <p class="contacto-intro">Disponible para salas de redacción, equipos de comunicación y proyectos independientes.</p>
+          <a class="correo" id="correo" href="#"></a>
+          <div class="acciones">
+            <a class="boton boton-solido" id="btnWhatsapp" href="#" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            <a class="boton" id="btnLlamar" href="#">Llamar</a>
+            <button class="boton" id="btnCopiar" type="button">Copiar correo</button>
+          </div>
+          <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
+          <dl class="datos" id="contactoDatos"></dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-in">
+      <span>© <span id="anio"></span> <span data-perfil="nombre"></span></span>
+      <a data-cv href="#" download>Descargar hoja de vida</a>
+    </div>
+  </footer>
+
+  <!-- ============ MODAL ============ -->
+  <dialog class="modal" id="modal" aria-labelledby="modalTitulo">
+    <button class="modal-cerrar" id="modalCerrar" type="button">Cerrar</button>
+    <div class="modal-media" id="modalMedia"></div>
+    <div class="modal-cuerpo">
+      <p class="modal-meta" id="modalMeta"></p>
+      <h3 class="modal-titulo" id="modalTitulo"></h3>
+      <p class="modal-resumen" id="modalResumen"></p>
+      <p class="modal-rol" id="modalRol"></p>
+      <a class="boton boton-solido" id="modalEnlace" href="#" target="_blank" rel="noopener">Ver publicación completa</a>
+    </div>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
