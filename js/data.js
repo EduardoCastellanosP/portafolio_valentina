@@ -83,7 +83,7 @@ const LOGROS = [
    --------------------------------------------------------- */
 const TRABAJOS = [
   {
-    titulo: "Título del video de Drive",
+    titulo: "Kany García en Bucaramanga: campaña de lanzamiento",
     categoria: "Video", medio: "", anio: "",
     resumen: "",
     rol: "Presentadora",
